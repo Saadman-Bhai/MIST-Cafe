@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Burger",
+    "price": 60,
+    "image": "assets/images/burger.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Chicken Sandwich",
+    "price": 70,
+    "image": "assets/images/sandwich.jpg"
+  },
+  {
+    "id": 3,
+    "name": "French Fries",
+    "price": 40,
+    "image": "assets/images/fries.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Chicken Roll",
+    "price": 50,
+    "image": "assets/images/roll.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Pizza Slice",
+    "price": 80,
+    "image": "assets/images/pizza.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Cold Coffee",
+    "price": 45,
+    "image": "assets/images/coffee.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Chicken Momo",
+    "price": 65,
+    "image": "assets/images/momo.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Chicken Nuggets",
+    "price": 55,
+    "image": "assets/images/nuggets.jpg"
+  }
+]

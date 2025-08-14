@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIST Cafeteria — Personal Information</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/mist-logo.png" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="assets/images/mist-logo.png" alt="MIST Logo" class="logo" />
+      <div class="brand-text">
+        <h1>MIST Cafeteria</h1>
+        <p class="muted">Pre-order for break & prayer time</p>
+      </div>
+    </div>
+    <nav class="stepper" aria-label="Checkout Steps">
+      <a class="step active" href="index.html">1. Info</a>
+      <span class="sep">›</span>
+      <span class="step">2. Place Order</span>
+      <span class="sep">›</span>
+      <span class="step">3. Confirm & Pay</span>
+      <span class="sep">›</span>
+      <span class="step">4. Done</span>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <section class="card">
+      <h2 class="card-title">Your Details</h2>
+      <p class="card-subtitle">Please enter your information so we can deliver correctly.</p>
+
+      <form id="personalForm" class="form-grid" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" placeholder="e.g., Sadman Zaman" required />
+          <small class="error" data-for="name"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="dept">Department <span class="req">*</span></label>
+          <select id="dept" name="dept" required>
+            <option value="">Select Department</option>
+            <option value="CSE">CSE</option>
+            <option value="ME">ME</option>
+            <option value="CE">CE</option>
+            <option value="EECE">EECE</option>
+            <option value="IPE">IPE</option>
+            <option value="BME">BME</option>
+            <option value="NSE">NSE</option>
+            <option value="AE">AE</option>
+            <option value="NAME">NAME</option>
+            <option value="ARCH">ARCH</option>
+            <option value="EWCE">EWCE</option>
+            <option value="PME">PME</option>
+            <option value="Other">Other</option>
+          </select>
+          <small class="error" data-for="dept"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="tower">Tower Number <span class="req">*</span></label>
+          <input type="text" id="tower" name="tower" placeholder="e.g., 2" required />
+          <small class="error" data-for="tower"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="room">Room Number <span class="req">*</span></label>
+          <input type="text" id="room" name="room" placeholder="e.g., 408" required />
+          <small class="error" data-for="room"></small>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Save & Continue →</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="note">
+      <p>⏰ Please place your order within <strong>15 minutes before</strong> each break/prayer time.</p>
+      <p>🚚 Classroom delivery fee: <strong>+5 ৳</strong> (applied on the payment page if delivery selected).</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> MIST Cafeteria • Built for students
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/personal-info.js"></script>
+</body>
+</html>

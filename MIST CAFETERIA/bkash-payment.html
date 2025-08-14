@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIST Cafeteria - bKash Payment</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <img src="assets/images/mist-logo.png" alt="MIST Logo" class="logo">
+      <div class="brand-text">
+        <h1>MIST Cafeteria</h1>
+        <p class="muted">Complete your bKash payment</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 class="card-title">bKash Payment</h2>
+      <p class="card-subtitle">Total Amount: <strong id="paymentAmount">0৳</strong></p>
+
+      <div class="payment-instructions">
+        <h3>Payment Instructions:</h3>
+        <ol>
+          <li>Open bKash app</li>
+          <li>Go to "Payment" section</li>
+          <li>Scan the QR code below</li>
+          <li>Enter the exact amount shown above</li>
+          <li>Complete the payment</li>
+        </ol>
+
+        <div class="qr-code">
+          <!-- Replace with your actual bKash QR code -->
+          <img src="assets/images/bkash-qr.png" alt="bKash QR Code">
+          <p>Merchant: MIST Cafeteria</p>
+        </div>
+      </div>
+
+      <form id="bkashForm">
+        <div class="form-group">
+          <label for="phone">bKash Phone Number <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
+          <small class="error" data-for="phone"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="trxId">Transaction ID <span class="req">*</span></label>
+          <input type="text" id="trxId" name="trxId" placeholder="TRX123456789" required>
+          <small class="error" data-for="trxId"></small>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Complete Payment</button>
+          <button type="button" id="cancelBtn" class="btn">Cancel</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="assets/js/bkash-payment.js"></script>
+</body>
+</html>

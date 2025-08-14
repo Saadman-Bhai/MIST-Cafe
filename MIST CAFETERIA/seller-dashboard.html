@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MIST Cafeteria - Seller Dashboard</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/mist-logo.png">
+  <style>
+    /* Seller-specific styles */
+    .seller-controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .order-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .order-table th, .order-table td {
+      border: 1px solid var(--border);
+      padding: 10px;
+      text-align: left;
+    }
+    .order-table th {
+      background-color: var(--panel);
+    }
+    @media print {
+      .no-print { display: none; }
+      body { background: white; color: black; }
+      .order-table { width: 100%; }
+    }
+    .payment-method {
+      font-weight: bold;
+    }
+    .payment-method.cash {
+      color: green;
+    }
+    .payment-method.bkash {
+      color: #e2136e;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">
+      <img src="assets/images/mist-logo.png" class="logo">
+      <div class="brand-text">
+        <h1>MIST Cafeteria</h1>
+        <p class="muted">Seller Dashboard</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="seller-controls no-print">
+      <button id="refresh-btn" class="btn primary">Refresh</button>
+      <button id="clear-btn" class="btn danger">Clear All Orders</button>
+      <button id="print-btn" class="btn">Print Orders</button>
+    </div>
+
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Name</th>
+          <th>Dept</th>
+          <th>Location</th>
+          <th>Items</th>
+          <th>Total</th>
+          <th>Payment Method</th>
+          <th>Time</th>
+          <th class="no-print">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="orders-table-body"></tbody>
+    </table>
+  </div>
+
+  <script src="assets/js/seller-dashboard.js"></script>
+</body>
+</html>

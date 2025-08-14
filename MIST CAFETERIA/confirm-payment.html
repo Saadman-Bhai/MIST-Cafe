@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIST Cafeteria — Confirm & Pay</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/mist-logo.png" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="assets/images/mist-logo.png" alt="MIST Logo" class="logo" />
+      <div class="brand-text">
+        <h1>MIST Cafeteria</h1>
+        <p class="muted">Pre-order for break & prayer time</p>
+      </div>
+    </div>
+    <nav class="stepper" aria-label="Checkout Steps">
+      <a class="step" href="index.html">1. Info</a>
+      <span class="sep">›</span>
+      <a class="step" href="place-order.html">2. Place Order</a>
+      <span class="sep">›</span>
+      <a class="step active" href="confirm-payment.html">3. Confirm & Pay</a>
+      <span class="sep">›</span>
+      <span class="step">4. Done</span>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 class="card-title">Confirm Your Order</h2>
+      <p class="card-subtitle">Review your order details and select payment method</p>
+
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="confirmOrderItems"></div>
+        <div class="total">
+          <span>Total:</span>
+          <span id="confirmTotalAmount">0৳</span>
+        </div>
+      </div>
+
+      <div class="delivery-info">
+        <h3>Delivery Information</h3>
+        <div id="deliveryDetails"></div>
+      </div>
+
+      <div class="payment-methods">
+        <h3>Payment Method</h3>
+        <div class="payment-method">
+          <input type="radio" id="cash" name="payment" value="Cash on Delivery" checked />
+          <label for="cash">Cash on Delivery</label>
+        </div>
+        <div class="payment-method">
+          <input type="radio" id="bkash" name="payment" value="bKash" />
+          <label for="bkash">bKash</label>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button id="confirmOrderBtn" class="btn primary" >Confirm Order</button>
+      </div>
+    </section>
+
+    <section class="note">
+      <p>⏰ Please place your order within <strong>15 minutes before</strong> each break/prayer time.</p>
+      <p>🚚 Classroom delivery fee: <strong>+5 ৳</strong> (applied on the payment page if delivery selected).</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> MIST Cafeteria • Built for students
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/confirm-payment.js"></script>
+</body>
+</html>
